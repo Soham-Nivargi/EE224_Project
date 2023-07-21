@@ -1,0 +1,1055 @@
+Analysis & Synthesis report for check
+Wed Nov 30 10:12:16 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |cpu|statetransition:controllerfinal|spres
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 30 10:12:16 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; check                                       ;
+; Top-level Entity Name              ; cpu                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 3                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; cpu                ; check              ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+; statetransition.vhd              ; yes             ; User VHDL File  ; D:/IITB-CPU Project/statetransition.vhd ;         ;
+; comparator.vhd                   ; yes             ; User VHDL File  ; D:/IITB-CPU Project/comparator.vhd      ;         ;
+; shifter7.vhd                     ; yes             ; User VHDL File  ; D:/IITB-CPU Project/shifter7.vhd        ;         ;
+; priorityencoder.vhd              ; yes             ; User VHDL File  ; D:/IITB-CPU Project/priorityencoder.vhd ;         ;
+; tempreg.vhd                      ; yes             ; User VHDL File  ; D:/IITB-CPU Project/tempreg.vhd         ;         ;
+; structure.vhd                    ; yes             ; User VHDL File  ; D:/IITB-CPU Project/structure.vhd       ;         ;
+; seq_extender.vhd                 ; yes             ; User VHDL File  ; D:/IITB-CPU Project/seq_extender.vhd    ;         ;
+; se9_16.vhd                       ; yes             ; User VHDL File  ; D:/IITB-CPU Project/se9_16.vhd          ;         ;
+; se7_16.vhd                       ; yes             ; User VHDL File  ; D:/IITB-CPU Project/se7_16.vhd          ;         ;
+; regfile.vhd                      ; yes             ; User VHDL File  ; D:/IITB-CPU Project/regfile.vhd         ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; D:/IITB-CPU Project/memory.vhd          ;         ;
+; decode_3_8.vhd                   ; yes             ; User VHDL File  ; D:/IITB-CPU Project/decode_3_8.vhd      ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; D:/IITB-CPU Project/alu.vhd             ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; D:/IITB-CPU Project/cpu.vhd             ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+;                                             ;                    ;
+; Total combinational functions               ; 0                  ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 0                  ;
+;     -- 3 input functions                    ; 0                  ;
+;     -- <=2 input functions                  ; 0                  ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 0                  ;
+;     -- arithmetic mode                      ; 0                  ;
+;                                             ;                    ;
+; Total registers                             ; 0                  ;
+;     -- Dedicated logic registers            ; 0                  ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 3                  ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; output_test~output ;
+; Maximum fan-out                             ; 1                  ;
+; Total fan-out                               ; 3                  ;
+; Average fan-out                             ; 0.50               ;
++---------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |cpu                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |cpu                ; cpu         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |cpu|statetransition:controllerfinal|spres                                                                                                                                                                                                                          ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; Name      ; spres.s22 ; spres.s21 ; spres.s20 ; spres.s19 ; spres.s18 ; spres.s17 ; spres.s16 ; spres.s15 ; spres.s14 ; spres.s13 ; spres.s12 ; spres.s11 ; spres.s10 ; spres.s9 ; spres.s8 ; spres.s7 ; spres.s6 ; spres.s5 ; spres.s4 ; spres.s3 ; spres.s2 ; spres.s0 ; spres.s1 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; spres.s1  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; spres.s0  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; spres.s2  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; spres.s3  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; spres.s4  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s5  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s6  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s7  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s8  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s9  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s10 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s11 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s12 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s13 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s14 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s15 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s16 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s17 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s18 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s19 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s20 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s21 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; spres.s22 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++---------------------------------------------------------------+--------------------+
+; Register name                                                 ; Reason for Removal ;
++---------------------------------------------------------------+--------------------+
+; structure:datapathfinal|tempreg:Instrucreg|regout[0,1,12..15] ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[0..15]   ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Tempregister2|regout[0..15]   ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Instrucreg|regout[2..8]       ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[14]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[12]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[10]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[8]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[6]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[4]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[2]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[0]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[1]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[3]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[5]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[7]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[9]            ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[11]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[13]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R0[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R4[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R2[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R6[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R1[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R5[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R3[15]           ; Lost fanout        ;
+; structure:datapathfinal|regfile:Registerfile|R7[15]           ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Tempregister0|regout[0..15]   ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Instrucreg|regout[9..11]      ; Lost fanout        ;
+; structure:datapathfinal|tempreg:Tempregister3|regout[0..15]   ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s1                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s0                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s2                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s3                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s4                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s5                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s6                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s7                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s8                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s9                      ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s10                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s11                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s12                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s13                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s14                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s15                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s16                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s17                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s18                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s19                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s20                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s21                     ; Lost fanout        ;
+; statetransition:controllerfinal|spres.s22                     ; Lost fanout        ;
+; Total Number of Removed Registers = 231                       ;                    ;
++---------------------------------------------------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                         ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal ; Registers Removed due to This Register                                              ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+; structure:datapathfinal|tempreg:Instrucreg|regout[15]    ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister1|regout[4],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister1|regout[3],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister1|regout[2],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister1|regout[1],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister1|regout[0],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Instrucreg|regout[4],                               ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Instrucreg|regout[2],                               ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Instrucreg|regout[3],                               ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[4],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[3],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[2],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[1],                            ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[0],                            ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s1, statetransition:controllerfinal|spres.s2, ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s3, statetransition:controllerfinal|spres.s4, ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s5, statetransition:controllerfinal|spres.s6, ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s7, statetransition:controllerfinal|spres.s8, ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s16                                           ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[15] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Instrucreg|regout[5],                               ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister0|regout[15],                           ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s17,                                          ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s18,                                          ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s19                                           ;
+; structure:datapathfinal|tempreg:Tempregister2|regout[15] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Instrucreg|regout[8],                               ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s9,                                           ;
+;                                                          ;                    ; statetransition:controllerfinal|spres.s10                                           ;
+; structure:datapathfinal|regfile:Registerfile|R0[14]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Instrucreg|regout[10],                              ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Instrucreg|regout[9],                               ;
+;                                                          ;                    ; structure:datapathfinal|tempreg:Tempregister3|regout[14]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[14] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[14]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[13] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[13]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[12] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[12]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[11] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[11]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[10] ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[10]                            ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[9]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[9]                             ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[8]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[8]                             ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[7]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[7]                             ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[6]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[6]                             ;
+; structure:datapathfinal|tempreg:Tempregister1|regout[5]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister0|regout[5]                             ;
+; structure:datapathfinal|tempreg:Tempregister2|regout[7]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Instrucreg|regout[7]                                ;
+; structure:datapathfinal|tempreg:Tempregister2|regout[6]  ; Lost Fanouts       ; structure:datapathfinal|tempreg:Instrucreg|regout[6]                                ;
+; structure:datapathfinal|regfile:Registerfile|R0[12]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[12]                            ;
+; structure:datapathfinal|regfile:Registerfile|R0[10]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[10]                            ;
+; structure:datapathfinal|regfile:Registerfile|R0[8]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[8]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[6]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[6]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[4]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[4]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[2]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[2]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[0]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[0]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[1]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[1]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[3]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[3]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[5]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[5]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[7]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[7]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[9]       ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[9]                             ;
+; structure:datapathfinal|regfile:Registerfile|R0[11]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[11]                            ;
+; structure:datapathfinal|regfile:Registerfile|R0[13]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[13]                            ;
+; structure:datapathfinal|regfile:Registerfile|R0[15]      ; Lost Fanouts       ; structure:datapathfinal|tempreg:Tempregister3|regout[15]                            ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |cpu|statetransition:controllerfinal|snext.s11                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|regfile:Registerfile|D1[1]       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|regfile:Registerfile|D2[0]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |cpu|structure:datapathfinal|priorityencoder:prienc|loopcondn ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux87                            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux104                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux70                            ;
+; 7:1                ; 11 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux155                           ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux66                            ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux136                           ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux171                           ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux162                           ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux145                           ;
+; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux39                            ;
+; 1:1                ; 6 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux175                           ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux210                           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux126                           ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux161                           ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux49                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux150                           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux225                           ;
+; 1:1                ; 3 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux12                            ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux51                            ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux57                            ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux80                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux119                           ;
+; 6:1                ; 13 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux111                           ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux90                            ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux97                            ;
+; 1:1                ; 26 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |cpu|structure:datapathfinal|Mux204                           ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; No         ; |cpu|structure:datapathfinal|Mux218                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 3                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Nov 30 10:11:56 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off check -c check
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file clock_divider_tb.vhd
+    Info (12022): Found design unit 1: clock_divider_tb-bhv File: D:/IITB-CPU Project/clock_divider_tb.vhd Line: 7
+    Info (12023): Found entity 1: clock_divider_tb File: D:/IITB-CPU Project/clock_divider_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file statetransition.vhd
+    Info (12022): Found design unit 1: statetransition-fsm File: D:/IITB-CPU Project/statetransition.vhd Line: 15
+    Info (12023): Found entity 1: statetransition File: D:/IITB-CPU Project/statetransition.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
+    Info (12022): Found design unit 1: comparator-bhv File: D:/IITB-CPU Project/comparator.vhd Line: 13
+    Info (12023): Found entity 1: comparator File: D:/IITB-CPU Project/comparator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file shifter7.vhd
+    Info (12022): Found design unit 1: shifter7-Struct File: D:/IITB-CPU Project/shifter7.vhd Line: 9
+    Info (12023): Found entity 1: shifter7 File: D:/IITB-CPU Project/shifter7.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file priorityencoder.vhd
+    Info (12022): Found design unit 1: priorityencoder-bhv File: D:/IITB-CPU Project/priorityencoder.vhd Line: 11
+    Info (12023): Found entity 1: priorityencoder File: D:/IITB-CPU Project/priorityencoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tempreg.vhd
+    Info (12022): Found design unit 1: tempreg-arcreg File: D:/IITB-CPU Project/tempreg.vhd Line: 13
+    Info (12023): Found entity 1: tempreg File: D:/IITB-CPU Project/tempreg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file structure.vhd
+    Info (12022): Found design unit 1: structure-connection File: D:/IITB-CPU Project/structure.vhd Line: 18
+    Info (12023): Found entity 1: structure File: D:/IITB-CPU Project/structure.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file seq_extender.vhd
+    Info (12022): Found design unit 1: seq_ex-design File: D:/IITB-CPU Project/seq_extender.vhd Line: 9
+    Info (12023): Found entity 1: seq_ex File: D:/IITB-CPU Project/seq_extender.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file se9_16.vhd
+    Info (12022): Found design unit 1: extend_9_16-design File: D:/IITB-CPU Project/se9_16.vhd Line: 9
+    Info (12023): Found entity 1: extend_9_16 File: D:/IITB-CPU Project/se9_16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file se7_16.vhd
+    Info (12022): Found design unit 1: extend_6_16-design File: D:/IITB-CPU Project/se7_16.vhd Line: 9
+    Info (12023): Found entity 1: extend_6_16 File: D:/IITB-CPU Project/se7_16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhd
+    Info (12022): Found design unit 1: regfile-registers File: D:/IITB-CPU Project/regfile.vhd Line: 19
+    Info (12023): Found entity 1: regfile File: D:/IITB-CPU Project/regfile.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: memory-behav File: D:/IITB-CPU Project/memory.vhd Line: 16
+    Info (12023): Found entity 1: memory File: D:/IITB-CPU Project/memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decode_3_8.vhd
+    Info (12022): Found design unit 1: decoder-design File: D:/IITB-CPU Project/decode_3_8.vhd Line: 9
+    Info (12023): Found entity 1: decoder File: D:/IITB-CPU Project/decode_3_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-behav File: D:/IITB-CPU Project/alu.vhd Line: 16
+    Info (12023): Found entity 1: alu File: D:/IITB-CPU Project/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: cpu-main File: D:/IITB-CPU Project/cpu.vhd Line: 10
+    Info (12023): Found entity 1: cpu File: D:/IITB-CPU Project/cpu.vhd Line: 5
+Info (12127): Elaborating entity "cpu" for the top level hierarchy
+Info (12128): Elaborating entity "statetransition" for hierarchy "statetransition:controllerfinal" File: D:/IITB-CPU Project/cpu.vhd Line: 36
+Warning (10631): VHDL Process Statement warning at statetransition.vhd(32): inferring latch(es) for signal or variable "states", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at statetransition.vhd(32): inferring latch(es) for signal or variable "snext", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s22" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s21" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s20" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s19" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s18" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s17" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s16" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s15" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s14" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s13" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s12" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s11" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s10" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s9" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s8" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s7" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s6" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s5" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s4" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s3" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s2" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s1" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "snext.s0" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "states[0]" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "states[1]" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "states[2]" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "states[3]" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (10041): Inferred latch for "states[4]" at statetransition.vhd(32) File: D:/IITB-CPU Project/statetransition.vhd Line: 32
+Info (12128): Elaborating entity "structure" for hierarchy "structure:datapathfinal" File: D:/IITB-CPU Project/cpu.vhd Line: 38
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "A1", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "inMemA", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "ir", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "R7curr", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "Ain", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "Bin", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "alusel", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "Cin", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "intr3", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "A2", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "intr1", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "intr2", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "intr0", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "A3", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "rfin", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "inshft", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "inMemD", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Warning (10631): VHDL Process Statement warning at structure.vhd(149): inferring latch(es) for signal or variable "decin", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "decin[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "decin[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "decin[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemD[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inshft[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "rfin[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A3[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A3[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A3[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr0[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr2[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr1[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A2[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A2[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A2[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "intr3[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Cin" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "alusel" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Bin[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "Ain[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "R7curr[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "ir[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[3]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[4]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[5]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[6]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[7]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[8]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[9]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[10]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[11]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[12]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[13]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[14]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "inMemA[15]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A1[0]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A1[1]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (10041): Inferred latch for "A1[2]" at structure.vhd(149) File: D:/IITB-CPU Project/structure.vhd Line: 149
+Info (12128): Elaborating entity "tempreg" for hierarchy "structure:datapathfinal|tempreg:Tempregister0" File: D:/IITB-CPU Project/structure.vhd Line: 116
+Info (10041): Inferred latch for "regvalue[0]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[1]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[2]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[3]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[4]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[5]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[6]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[7]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[8]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[9]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[10]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[11]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[12]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[13]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[14]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (10041): Inferred latch for "regvalue[15]" at tempreg.vhd(18) File: D:/IITB-CPU Project/tempreg.vhd Line: 18
+Info (12128): Elaborating entity "alu" for hierarchy "structure:datapathfinal|alu:ALUmachine" File: D:/IITB-CPU Project/structure.vhd Line: 121
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "sumop", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "Cout", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "nandop", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[0]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[1]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[2]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[3]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[4]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[5]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[6]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[7]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[8]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[9]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[10]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[11]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[12]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[13]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[14]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[15]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "Z" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "Cout" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[0]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[1]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[2]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[3]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[4]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[5]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[6]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[7]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[8]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[9]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[10]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[11]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[12]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[13]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[14]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[15]" at alu.vhd(25) File: D:/IITB-CPU Project/alu.vhd Line: 25
+Info (10041): Inferred latch for "alu_out[0]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[1]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[2]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[3]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[4]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[5]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[6]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[7]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[8]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[9]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[10]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[11]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[12]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[13]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[14]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[15]" at alu.vhd(23) File: D:/IITB-CPU Project/alu.vhd Line: 23
+Info (12128): Elaborating entity "regfile" for hierarchy "structure:datapathfinal|regfile:Registerfile" File: D:/IITB-CPU Project/structure.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at regfile.vhd(76): inferring latch(es) for signal or variable "D1", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Warning (10631): VHDL Process Statement warning at regfile.vhd(76): inferring latch(es) for signal or variable "D2", which holds its previous value in one or more paths through the process File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[0]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[1]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[2]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[3]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[4]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[5]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[6]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[7]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[8]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[9]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[10]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[11]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[12]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[13]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[14]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2[15]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[0]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[1]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[2]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[3]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[4]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[5]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[6]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[7]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[8]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[9]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[10]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[11]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[12]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[13]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[14]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D1[15]" at regfile.vhd(76) File: D:/IITB-CPU Project/regfile.vhd Line: 76
+Info (10041): Inferred latch for "D2o[0]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[1]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[2]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[3]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[4]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[5]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[6]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[7]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[8]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[9]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[10]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[11]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[12]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[13]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[14]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D2o[15]" at regfile.vhd(74) File: D:/IITB-CPU Project/regfile.vhd Line: 74
+Info (10041): Inferred latch for "D1o[0]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[1]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[2]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[3]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[4]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[5]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[6]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[7]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[8]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[9]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[10]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[11]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[12]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[13]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[14]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (10041): Inferred latch for "D1o[15]" at regfile.vhd(73) File: D:/IITB-CPU Project/regfile.vhd Line: 73
+Info (12128): Elaborating entity "memory" for hierarchy "structure:datapathfinal|memory:mem" File: D:/IITB-CPU Project/structure.vhd Line: 129
+Info (12128): Elaborating entity "extend_6_16" for hierarchy "structure:datapathfinal|extend_6_16:Signextender10bit" File: D:/IITB-CPU Project/structure.vhd Line: 131
+Info (12128): Elaborating entity "extend_9_16" for hierarchy "structure:datapathfinal|extend_9_16:Signextender7bit1" File: D:/IITB-CPU Project/structure.vhd Line: 133
+Info (12128): Elaborating entity "shifter7" for hierarchy "structure:datapathfinal|shifter7:Shifter7bit" File: D:/IITB-CPU Project/structure.vhd Line: 135
+Info (12128): Elaborating entity "seq_ex" for hierarchy "structure:datapathfinal|seq_ex:seqextender" File: D:/IITB-CPU Project/structure.vhd Line: 137
+Info (12128): Elaborating entity "priorityencoder" for hierarchy "structure:datapathfinal|priorityencoder:prienc" File: D:/IITB-CPU Project/structure.vhd Line: 139
+Info (12128): Elaborating entity "decoder" for hierarchy "structure:datapathfinal|decoder:dec" File: D:/IITB-CPU Project/structure.vhd Line: 143
+Info (12128): Elaborating entity "comparator" for hierarchy "structure:datapathfinal|comparator:Comparer" File: D:/IITB-CPU Project/structure.vhd Line: 147
+Warning (113028): 65535 out of 131072 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: D:/IITB-CPU Project/db/check.ram0_memory_e411fb78.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 65537 to 131071 are not initialized File: D:/IITB-CPU Project/db/check.ram0_memory_e411fb78.hdl.mif Line: 1
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "structure:datapathfinal|memory:mem|data" is uninferred because MIF is not supported for the selected family File: D:/IITB-CPU Project/memory.vhd Line: 21
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output_test" is stuck at VCC File: D:/IITB-CPU Project/cpu.vhd Line: 7
+Info (17049): 231 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: D:/IITB-CPU Project/cpu.vhd Line: 6
+    Warning (15610): No output dependent on input pin "clock" File: D:/IITB-CPU Project/cpu.vhd Line: 6
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Wed Nov 30 10:12:16 2022
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:32
+
+

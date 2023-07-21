@@ -1,0 +1,642 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/IITB-CPU Project/simulation/modelsim
+Ealu
+Z1 w1669782863
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+R0
+Z4 8D:/IITB-CPU Project/alu.vhd
+Z5 FD:/IITB-CPU Project/alu.vhd
+l0
+L4 1
+V]g?lF@?7b941ISWa1a>Ge3
+!s100 NnR2i>kzh2D9=9P8D0R;a0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1669784331
+!i10b 1
+Z8 !s108 1669784331.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/alu.vhd|
+Z10 !s107 D:/IITB-CPU Project/alu.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 3 alu 0 22 ]g?lF@?7b941ISWa1a>Ge3
+!i122 12
+l21
+L16 35
+VDZTY>ZM]na<2of2JWmYfI1
+!s100 faJli8lOi8f7YCg1GZKbE0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eclock_divider_tb
+Z13 w1669782864
+R2
+R3
+!i122 14
+R0
+Z14 8D:/IITB-CPU Project/clock_divider_tb.vhd
+Z15 FD:/IITB-CPU Project/clock_divider_tb.vhd
+l0
+L4 1
+V119iRA8:_b7Ec7RSW;:3<2
+!s100 d?TOnS<B_9l]N`OC<=1lJ0
+R6
+31
+Z16 !s110 1669784332
+!i10b 1
+Z17 !s108 1669784332.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/clock_divider_tb.vhd|
+!s107 D:/IITB-CPU Project/clock_divider_tb.vhd|
+!i113 1
+R11
+R12
+Abhv
+R2
+R3
+DEx4 work 16 clock_divider_tb 0 22 119iRA8:_b7Ec7RSW;:3<2
+!i122 14
+l16
+L7 15
+VcV<oR>BaEo4ZUi=U<co3R1
+!s100 Ok;ca;Oo^FHP]A_2X?PTH3
+R6
+31
+R16
+!i10b 1
+R17
+R18
+Z19 !s107 D:/IITB-CPU Project/clock_divider_tb.vhd|
+!i113 1
+R11
+R12
+Ecomparator
+R1
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+!i122 1
+R0
+Z22 8D:/IITB-CPU Project/comparator.vhd
+Z23 FD:/IITB-CPU Project/comparator.vhd
+l0
+L5 1
+VH]QXJPVlVf^FAjlY3Edd;1
+!s100 dJj3R;F:gP<W0LYP=RV=N1
+R6
+31
+Z24 !s110 1669784330
+!i10b 1
+Z25 !s108 1669784330.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/comparator.vhd|
+Z27 !s107 D:/IITB-CPU Project/comparator.vhd|
+!i113 1
+R11
+R12
+Abhv
+R20
+R21
+R2
+R3
+DEx4 work 10 comparator 0 22 H]QXJPVlVf^FAjlY3Edd;1
+!i122 1
+l15
+L13 7
+V?IW?NzSiGU0>KAdmIXUz13
+!s100 KYi8Z8WkcYNbDNjJ4G8dc3
+R6
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Ecpu
+R13
+Z28 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 13
+R0
+Z29 8D:/IITB-CPU Project/cpu.vhd
+Z30 FD:/IITB-CPU Project/cpu.vhd
+l0
+L5 1
+VN9EQBW5FU9^5_bef4E]SJ0
+!s100 :KH;APQ;>KNfVlZKLb;292
+R6
+31
+R16
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/cpu.vhd|
+Z32 !s107 D:/IITB-CPU Project/cpu.vhd|
+!i113 1
+R11
+R12
+Amain
+R28
+R2
+R3
+DEx4 work 3 cpu 0 22 N9EQBW5FU9^5_bef4E]SJ0
+!i122 13
+l34
+L10 33
+VO;l8`MY3lob7YjNhmge]K0
+!s100 aj[M3M`QQa:K3hbCL4dZR2
+R6
+31
+R16
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Edecoder
+R13
+R2
+R3
+!i122 11
+R0
+Z33 8D:/IITB-CPU Project/decode_3_8.vhd
+Z34 FD:/IITB-CPU Project/decode_3_8.vhd
+l0
+L4 1
+VgESj@]0z[cQPS<^EPmc]c3
+!s100 9c8:a_1P7?bX=5l3ORlHR0
+R6
+31
+R7
+!i10b 1
+R8
+Z35 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/decode_3_8.vhd|
+Z36 !s107 D:/IITB-CPU Project/decode_3_8.vhd|
+!i113 1
+R11
+R12
+Adesign
+R2
+R3
+DEx4 work 7 decoder 0 22 gESj@]0z[cQPS<^EPmc]c3
+!i122 11
+l11
+L9 34
+VD40@NO?i1GPJLMXVV9ZB72
+!s100 5FT]NJ4Dd4bkN6@PzVd5z2
+R6
+31
+R7
+!i10b 1
+R8
+R35
+R36
+!i113 1
+R11
+R12
+Eextend_6_16
+R1
+R2
+R3
+!i122 8
+R0
+Z37 8D:/IITB-CPU Project/se7_16.vhd
+Z38 FD:/IITB-CPU Project/se7_16.vhd
+l0
+L4 1
+V7=hKc[a[1TI9JmE>^USaS0
+!s100 0Mm?1Z5VOa[a>@cV^4eJS0
+R6
+31
+R7
+!i10b 1
+R8
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/se7_16.vhd|
+Z40 !s107 D:/IITB-CPU Project/se7_16.vhd|
+!i113 1
+R11
+R12
+Adesign
+R2
+R3
+DEx4 work 11 extend_6_16 0 22 7=hKc[a[1TI9JmE>^USaS0
+!i122 8
+l11
+Z41 L9 23
+VbeN6``@VoXU8?o7_2X7JI3
+!s100 Ga9KN4L:EXAb[>?Y4LEI]2
+R6
+31
+R7
+!i10b 1
+R8
+R39
+R40
+!i113 1
+R11
+R12
+Eextend_9_16
+R13
+R2
+R3
+!i122 7
+R0
+Z42 8D:/IITB-CPU Project/se9_16.vhd
+Z43 FD:/IITB-CPU Project/se9_16.vhd
+l0
+L4 1
+V@ZU5`j5<P@=mmG_i?>IaY2
+!s100 ^J4Yd>FL@c2GiARNSk<`f1
+R6
+31
+R24
+!i10b 1
+R25
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/se9_16.vhd|
+Z45 !s107 D:/IITB-CPU Project/se9_16.vhd|
+!i113 1
+R11
+R12
+Adesign
+R2
+R3
+DEx4 work 11 extend_9_16 0 22 @ZU5`j5<P@=mmG_i?>IaY2
+!i122 7
+l11
+R41
+VU[Y6ei@5VPB`bz=__X94K1
+!s100 ORjSQeoZmdVLUWcOXEgJj1
+R6
+31
+R24
+!i10b 1
+R25
+R44
+R45
+!i113 1
+R11
+R12
+Ememory
+R1
+R28
+R2
+R3
+!i122 10
+R0
+Z46 8D:/IITB-CPU Project/memory.vhd
+Z47 FD:/IITB-CPU Project/memory.vhd
+l0
+L5 1
+VlCZM=UOZZk4>G^<a7M2Jo3
+!s100 ZHJIm>S^YoeH@Lifg[fFF2
+R6
+31
+R7
+!i10b 1
+R8
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/memory.vhd|
+Z49 !s107 D:/IITB-CPU Project/memory.vhd|
+!i113 1
+R11
+R12
+Abehav
+R28
+R2
+R3
+DEx4 work 6 memory 0 22 lCZM=UOZZk4>G^<a7M2Jo3
+!i122 10
+l23
+L16 23
+V>m9kabL=]Wm3Lo8fA4m]_2
+!s100 [Xh8A2@hH;CL=>0i`z?<12
+R6
+31
+R7
+!i10b 1
+R8
+R48
+R49
+!i113 1
+R11
+R12
+Epriorityencoder
+R13
+R28
+R2
+R3
+!i122 3
+R0
+Z50 8D:/IITB-CPU Project/priorityencoder.vhd
+Z51 FD:/IITB-CPU Project/priorityencoder.vhd
+l0
+L5 1
+VHJz7IKB^95k1]Moj>Xc4b1
+!s100 5J:aVkBZj26hhQWGnGG`k0
+R6
+31
+R24
+!i10b 1
+R25
+Z52 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/priorityencoder.vhd|
+Z53 !s107 D:/IITB-CPU Project/priorityencoder.vhd|
+!i113 1
+R11
+R12
+Abhv
+R28
+R2
+R3
+DEx4 work 15 priorityencoder 0 22 HJz7IKB^95k1]Moj>Xc4b1
+!i122 3
+l15
+L11 45
+V7LbABdE4cCRcoE59DeULm3
+!s100 :>ZCnNZMgL8=SlK8Dz9]D0
+R6
+31
+R24
+!i10b 1
+R25
+R52
+R53
+!i113 1
+R11
+R12
+Eregfile
+R1
+R2
+R3
+!i122 9
+R0
+Z54 8D:/IITB-CPU Project/regfile.vhd
+Z55 FD:/IITB-CPU Project/regfile.vhd
+l0
+L4 1
+VTIEQ_mVJ5]>h0LDcC?caD1
+!s100 4@lAi05>AW3>`HKR[QncX0
+R6
+31
+R7
+!i10b 1
+R8
+Z56 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/regfile.vhd|
+Z57 !s107 D:/IITB-CPU Project/regfile.vhd|
+!i113 1
+R11
+R12
+Aregisters
+R2
+R3
+DEx4 work 7 regfile 0 22 TIEQ_mVJ5]>h0LDcC?caD1
+!i122 9
+l30
+L19 115
+VTSBjmCZBgX_SY6nkOkHKQ0
+!s100 aF9WmEgZfZ62YCXWIKPBh1
+R6
+31
+R7
+!i10b 1
+R8
+R56
+R57
+!i113 1
+R11
+R12
+Eseq_ex
+R13
+R2
+R3
+!i122 6
+R0
+Z58 8D:/IITB-CPU Project/seq_extender.vhd
+Z59 FD:/IITB-CPU Project/seq_extender.vhd
+l0
+L4 1
+V<]TJN9kYNh:3TCUUjWNYS0
+!s100 0G0^Y1kR:ZE6R;@f[XYSo0
+R6
+31
+R24
+!i10b 1
+R25
+Z60 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/seq_extender.vhd|
+Z61 !s107 D:/IITB-CPU Project/seq_extender.vhd|
+!i113 1
+R11
+R12
+Adesign
+R2
+R3
+DEx4 work 6 seq_ex 0 22 <]TJN9kYNh:3TCUUjWNYS0
+!i122 6
+l11
+L9 8
+V0:Zz3`d>Tl5QiaHTDoX[N3
+!s100 c0@7Y=i_gDI4[[5geOlBI0
+R6
+31
+R24
+!i10b 1
+R25
+R60
+R61
+!i113 1
+R11
+R12
+Eshifter7
+R13
+R28
+R2
+R3
+!i122 2
+R0
+Z62 8D:/IITB-CPU Project/shifter7.vhd
+Z63 FD:/IITB-CPU Project/shifter7.vhd
+l0
+L5 1
+VAJ?G1oi]i@I[LTOX7M;Fe1
+!s100 mFA`ENZQNT[PFMNQl@RYP1
+R6
+31
+R24
+!i10b 1
+R25
+Z64 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/shifter7.vhd|
+Z65 !s107 D:/IITB-CPU Project/shifter7.vhd|
+!i113 1
+R11
+R12
+Astruct
+R28
+R2
+R3
+DEx4 work 8 shifter7 0 22 AJ?G1oi]i@I[LTOX7M;Fe1
+!i122 2
+l12
+L9 10
+VAGULNj^cC0>@RXnlihZ=n0
+!s100 zbJS5No`kI5_Q1KG80X6k0
+R6
+31
+R24
+!i10b 1
+R25
+R64
+R65
+!i113 1
+R11
+R12
+Estatetransition
+R1
+R28
+R2
+R3
+!i122 0
+R0
+Z66 8D:/IITB-CPU Project/statetransition.vhd
+Z67 FD:/IITB-CPU Project/statetransition.vhd
+l0
+L5 1
+VkOFIn^hWWBAd?FZkfWiof1
+!s100 ]3YUa6[QX?YP>T?T71EoC0
+R6
+31
+Z68 !s110 1669784329
+!i10b 1
+Z69 !s108 1669784329.000000
+Z70 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/statetransition.vhd|
+Z71 !s107 D:/IITB-CPU Project/statetransition.vhd|
+!i113 1
+R11
+R12
+Afsm
+R28
+R2
+R3
+DEx4 work 15 statetransition 0 22 kOFIn^hWWBAd?FZkfWiof1
+!i122 0
+l19
+L15 147
+VF_PSW^M<oWB2mbIDDz8c71
+!s100 ;;n[GadGze0[B[TlJPo^f3
+R6
+31
+R68
+!i10b 1
+R69
+R70
+R71
+!i113 1
+R11
+R12
+Estructure
+R1
+R28
+R2
+R3
+!i122 5
+R0
+Z72 8D:/IITB-CPU Project/structure.vhd
+Z73 FD:/IITB-CPU Project/structure.vhd
+l0
+L5 1
+VmPjkjbWiG]HJGAQZ>1<]n3
+!s100 =ld7K<n5?h^5_k`gae0mn1
+R6
+31
+R24
+!i10b 1
+R25
+Z74 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/structure.vhd|
+Z75 !s107 D:/IITB-CPU Project/structure.vhd|
+!i113 1
+R11
+R12
+Aconnection
+R28
+R2
+R3
+DEx4 work 9 structure 0 22 mPjkjbWiG]HJGAQZ>1<]n3
+!i122 5
+l115
+L18 312
+VAHj;@e8=E9A3C9J1aVlzl2
+!s100 Go7dg>jODS`@QeX>DJ_gH2
+R6
+31
+R24
+!i10b 1
+R25
+R74
+R75
+!i113 1
+R11
+R12
+Etempreg
+R13
+R2
+R3
+!i122 4
+R0
+Z76 8D:/IITB-CPU Project/tempreg.vhd
+Z77 FD:/IITB-CPU Project/tempreg.vhd
+l0
+L4 1
+VAZ:fDm`YU7ZSgmIACD`2[0
+!s100 ;l9]WBVR]=mI:S]AhIE;=3
+R6
+31
+R24
+!i10b 1
+R25
+Z78 !s90 -reportprogress|300|-93|-work|work|D:/IITB-CPU Project/tempreg.vhd|
+Z79 !s107 D:/IITB-CPU Project/tempreg.vhd|
+!i113 1
+R11
+R12
+Aarcreg
+R2
+R3
+DEx4 work 7 tempreg 0 22 AZ:fDm`YU7ZSgmIACD`2[0
+!i122 4
+l16
+L13 16
+VZLDbJlmFFFY?RHE>@2[<Y1
+!s100 ]l]HcKoh;1;JKNI7EId2h0
+R6
+31
+R24
+!i10b 1
+R25
+R78
+R79
+!i113 1
+R11
+R12

@@ -1,0 +1,31 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/DUT.vhdl}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/statetransition.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/comparator.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/shifter7.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/priorityencoder.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/tempreg.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/structure.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/seq_extender.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/se9_16.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/se7_16.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/regfile.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/memory.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/decode_3_8.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/alu.vhd}
+vcom -93 -work work {//Mac/Home/Desktop/New folder (2)/cpu.vhd}
+
+vcom -93 -work work {/Desktop/New folder (2)/Testbench.vhdl}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+
+add wave *
+view structure
+view signals
+run -all

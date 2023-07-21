@@ -1,0 +1,260 @@
+# Reading pref.tcl
+# do check_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/statetransition.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:05 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/statetransition.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity statetransition
+# -- Compiling architecture fsm of statetransition
+# End time: 02:53:05 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/comparator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:05 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/comparator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity comparator
+# -- Compiling architecture bhv of comparator
+# End time: 02:53:05 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/shifter7.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:05 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/shifter7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shifter7
+# -- Compiling architecture Struct of shifter7
+# End time: 02:53:05 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/priorityencoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:05 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/priorityencoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity priorityencoder
+# -- Compiling architecture bhv of priorityencoder
+# End time: 02:53:06 on Nov 30,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/tempreg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:06 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/tempreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tempreg
+# -- Compiling architecture arcreg of tempreg
+# End time: 02:53:06 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/structure.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:06 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/structure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity structure
+# -- Compiling architecture connection of structure
+# End time: 02:53:06 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/seq_extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:06 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/seq_extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seq_ex
+# -- Compiling architecture design of seq_ex
+# End time: 02:53:06 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/se9_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:06 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/se9_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity extend_9_16
+# -- Compiling architecture design of extend_9_16
+# End time: 02:53:06 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/se7_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:06 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/se7_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity extend_6_16
+# -- Compiling architecture design of extend_6_16
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/regfile.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:07 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture registers of regfile
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:07 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory
+# -- Compiling architecture behav of memory
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/decode_3_8.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:07 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/decode_3_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder
+# -- Compiling architecture design of decoder
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:07 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture behav of alu
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//Mac/Home/Desktop/New Folder (2)/cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:07 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work //Mac/Home/Desktop/New Folder (2)/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpu
+# -- Compiling architecture main of cpu
+# End time: 02:53:07 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/Desktop/New Folder (2)/clock_divider_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:08 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work /Desktop/New Folder (2)/clock_divider_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_divider_tb
+# -- Compiling architecture bhv of clock_divider_tb
+# End time: 02:53:08 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  clock_divider_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" clock_divider_tb 
+# Start time: 02:53:09 on Nov 30,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(bhv)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(main)
+# Loading work.statetransition(fsm)
+# Loading work.structure(connection)
+# Loading work.tempreg(arcreg)
+# Loading work.alu(behav)
+# Loading work.regfile(registers)
+# Loading work.memory(behav)
+# Loading work.extend_6_16(design)
+# Loading work.extend_9_16(design)
+# Loading work.shifter7(struct)
+# Loading work.seq_ex(design)
+# Loading work.priorityencoder(bhv)
+# Loading work.decoder(design)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.comparator(bhv)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/controllerfinal/states
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/datapathfinal/Registerfile/R7
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/controllerfinal/opcode
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/datapathfinal/Instrucreg/regout
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/controllerfinal/C
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+# End time: 03:13:47 on Nov 30,2022, Elapsed time: 0:20:38
+# Errors: 0, Warnings: 1

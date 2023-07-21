@@ -1,0 +1,110 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity controller is 
+	port(
+		C, Z, eq, loopcondn, clk, rst : in std_logic;
+		opcode : in std_logic_vector(3 downto 0);
+		condition : in std_logic_vector(1 downto 0);
+		
+		states : out std_logic_vector(4 downto 0)
+	);
+end entity;
+
+architecture fsm of controller is
+
+	type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14);
+	signal spres, snext : state := s1; 
+	begin
+
+	clock : process(clk, rst)
+	begin	
+		if(clk='0' and clk' event) then
+			if(rst='1') then
+				spres <= s1; 
+			else 
+				spres <= snext;
+			end if;
+		end if;
+	end process;
+	
+	transition : process(opcode, scurr, C, Z, eq, loopcondn, condition)
+	begin
+		if(rst = '0') then
+		case spres is
+			when s0 =>
+				states <= "00000";
+				snext <= s0;
+				
+			when s1 =>  
+				states <= "00001";
+				snext <= s2;
+				
+			when s2 => 
+				states <= "00010";
+				if(opcode = "0000" or opcode = "0010") then
+					if(condition = "00") then snext <= s3;
+					elsif(condition = "10" and C = '1') then snext <= s3;
+					elsif(condition = "01" and Z = '1') then snext <= s3;
+					else snext <= s5;
+					end if;
+				
+			   elsif(opcode = "0001") then snext <= s;	
+				elsif(opcode = "0100") then snext <= s6;
+				else                                                        ...........
+				end if;
+				
+				
+				
+			when s3 =>
+				stateID <= "00011";
+				if(opcode = "1100") then snext <= s9;
+				else snext <= s4;
+				end if;
+			when s4 =>
+				stateID <= "00100";
+				snext <= s1;
+			
+			
+			when s5 =>
+				stateID <= "00101";
+				snext <= s1;
+			when s6 => 
+				stateID <= "00110";
+				if(opcode = "0100") then snext <= s7;
+			   else snext <= s1;
+				end if;
+			when s7 =>
+				stateID <= "00111";
+				snext <= s1;
+			when s8 =>
+				stateID <= "01000";
+				snext <= s1;
+			when s9 =>
+				stateID <= "01001";
+				snext <= s10;
+			when s10 =>
+				stateID <= "01010";
+				if(opcode = "1100") then snext <= s12;
+				else snext <= s11;
+				end if;
+			when s11 =>
+				stateID <= "01011";
+				if(opcode = "1001") then snext <= s6;
+				else snext <= s12;
+				end if;
+			when s12 =>
+				stateID <= "01100";
+				snext <= s1;
+			when s13 =>
+				stateID <= "01101";
+				snext <= s1;
+			when s14 => 
+				stateID <= "01110";
+				snext <= s1;	
+				
+					end case;
+		end if;
+	end process;
+end architecture;

@@ -1,0 +1,271 @@
+# Reading pref.tcl
+# do check_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/IITB-CPU Project/statetransition.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:49 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/statetransition.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity statetransition
+# -- Compiling architecture fsm of statetransition
+# End time: 10:28:49 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/comparator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/comparator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity comparator
+# -- Compiling architecture bhv of comparator
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/shifter7.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/shifter7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shifter7
+# -- Compiling architecture Struct of shifter7
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/priorityencoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/priorityencoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity priorityencoder
+# -- Compiling architecture bhv of priorityencoder
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/tempreg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/tempreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tempreg
+# -- Compiling architecture arcreg of tempreg
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/structure.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/structure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity structure
+# -- Compiling architecture connection of structure
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/seq_extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/seq_extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seq_ex
+# -- Compiling architecture design of seq_ex
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/se9_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:50 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/se9_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity extend_9_16
+# -- Compiling architecture design of extend_9_16
+# End time: 10:28:50 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/se7_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/se7_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity extend_6_16
+# -- Compiling architecture design of extend_6_16
+# End time: 10:28:51 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/regfile.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture registers of regfile
+# End time: 10:28:51 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory
+# -- Compiling architecture behav of memory
+# End time: 10:28:51 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/decode_3_8.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/decode_3_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder
+# -- Compiling architecture design of decoder
+# End time: 10:28:51 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture behav of alu
+# End time: 10:28:51 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB-CPU Project/cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:51 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpu
+# -- Compiling architecture main of cpu
+# End time: 10:28:52 on Nov 30,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/IITB-CPU Project/clock_divider_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:28:52 on Nov 30,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB-CPU Project/clock_divider_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_divider_tb
+# -- Compiling architecture bhv of clock_divider_tb
+# End time: 10:28:52 on Nov 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  clock_divider_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" clock_divider_tb 
+# Start time: 10:28:52 on Nov 30,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(bhv)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(main)
+# Loading work.statetransition(fsm)
+# Loading work.structure(connection)
+# Loading work.tempreg(arcreg)
+# Loading work.alu(behav)
+# Loading work.regfile(registers)
+# Loading work.memory(behav)
+# Loading work.extend_6_16(design)
+# Loading work.extend_9_16(design)
+# Loading work.shifter7(struct)
+# Loading work.seq_ex(design)
+# Loading work.priorityencoder(bhv)
+# Loading work.decoder(design)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.comparator(bhv)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/opcode1
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/states1
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/datapathfinal/Registerfile/R7
+add wave -position insertpoint  \
+sim:/clock_divider_tb/dut_instance/datapathfinal/mem/mem_data_out
+# Break key hit
+# Break in Process output_proc at D:/IITB-CPU Project/tempreg.vhd line 20
+run -all
+# Break key hit
+# Break in Process clock at D:/IITB-CPU Project/statetransition.vhd line 21
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+# Break key hit
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+# Break key hit
+# Simulation stop requested.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 12 ns  Iteration: 2  Instance: /clock_divider_tb/dut_instance/datapathfinal/mem
+# End time: 10:48:13 on Nov 30,2022, Elapsed time: 0:19:21
+# Errors: 0, Warnings: 1
